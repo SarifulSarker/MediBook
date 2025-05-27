@@ -6,7 +6,7 @@ const Doctor = () => {
   const { speciality } = useParams();
   const [filterDoc, setFilterDoc] = useState([]);
   const { doctors } = useContext(AppContext);
-
+  const [showfilter,setshowfilter] = useState(false)
   const navigate = useNavigate();
   const applyFilter = () => {
     if (speciality) {
@@ -24,7 +24,11 @@ const Doctor = () => {
     <div>
       <p className="text-gray-500">Browse through the doctors specialist.</p>
       <div className="flex flex-col sm:flex-row items-start gap-5 mt-5">
-        <div className="flex flex-col gap-4 text-sm text-gray-600">
+        <button className={`py-1 px-3 border rounded text-sm transition-all sm:hidden ${showfilter ? 'bg-primary text-white' : ''}`}
+         onClick={() => setshowfilter(prev => !prev )}>Filters</button>
+        <div className={` flex-col gap-4 text-sm text-gray-600 
+          ${showfilter ? 'flex' : 'hidden sm:flex'}
+          `}>
           <p
             onClick={() =>
               speciality === "General physician"
