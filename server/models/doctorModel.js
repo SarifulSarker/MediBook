@@ -42,7 +42,7 @@ const doctorSchema = new mongoose.Schema({
     },
      available:{
          type:Boolean,
-      require:true
+      default:true
      
     },
      fees:{
