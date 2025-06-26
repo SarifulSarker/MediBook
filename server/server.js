@@ -17,7 +17,7 @@ connectDB();
 app.use(express.json())
 app.use(cors())
 
-
+conntectCloudinary();
 // api endpoints
 app.use('/api/admin', adminRouter)
 

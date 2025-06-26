@@ -37,6 +37,7 @@ const Login = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-white px-4">
+      <p>admin@medibook.com || password</p>
       <form
         onSubmit={onSubmitHandler}
         className="w-full max-w-sm bg-white shadow-lg rounded-xl p-8 space-y-6"
