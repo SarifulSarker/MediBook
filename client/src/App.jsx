@@ -11,10 +11,11 @@ import Appointment from "./pages/Appointment";
 import Navbar from "./components/Navbar";
 
 import Footer from "./components/Footer";
-
+ import { ToastContainer, toast } from 'react-toastify';
 const App = () => {
   return (
     <div className="max-w-[1450px] mx-auto px-5">
+      <ToastContainer/>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

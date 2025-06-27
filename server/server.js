@@ -5,6 +5,9 @@ import 'dotenv/config'
 import connectDB from './config/mongodb.js'
 import conntectCloudinary from './config/cloudinary.js'
 import adminRouter from './routes/adminRoute.js'
+import doctorRouter from './routes/doctorRoute.js'
+import userRouter from './routes/userRoute.js'
+
 // app config
 const app = express()
 const port = process.eventNames.PORT || 8000
@@ -21,6 +24,10 @@ conntectCloudinary();
 // api endpoints
 app.use('/api/admin', adminRouter)
 
+// doctor endpoint
+app.use('/api/doctor', doctorRouter)
+// user endpoint
+app.use('/api/user', userRouter )
 app.get('/', (req, res)=>{
 res.send('Api working greate ')
 })
